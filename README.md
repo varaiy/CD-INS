@@ -87,38 +87,11 @@ Result: z = 7.00 (stored in r6)
 🧠 How It Works
 Expression Evaluated:
 
-𝑧
-=
-𝑥
-2
-−
-𝑥
-+
-1
-z=x 
-2
- −x+1
+z = x^2−x+1
 For input x3, the calculation is:
 
-𝑧
-=
-3
-2
-−
-3
-+
-1
-=
-9
-−
-3
-+
-1
-=
-7
-z=3 
-2
- −3+1=9−3+1=7
+z = 3^2−3+1 = 9−3+1 = 7
+ 
 🧾 Assembly Instructions Used
 Instruction	Description
 MUL	Multiplies two registers
