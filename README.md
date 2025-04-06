@@ -1,59 +1,51 @@
 # 🧮 Arithmetic Expression Simulator — `x^2 - x + 1`
 
-This project is a compiler-like simulation created using **Flex (Lex)** in **C** to tokenize and evaluate the expression:
+This project simulates a simple arithmetic operation using **Lex (Flex)** in **C** to tokenize and evaluate the custom expression:
 
-z = x^2 - x + 1;
+z = x^2 - x + 1
 
 yaml
 Copy
 Edit
 
-It recognizes input value for variable `x`, and when the keyword `compute` is entered, it simulates the operation and generates assembly-like code.
+When provided with a value of `x` through input like `x3 compute`, the program computes the result and simulates assembly-like code generation.
 
 ---
 
-## ✨ Features
+## 📁 Project Structure
 
-✅ Parses expressions like: `x3 compute`  
-✅ Generates pseudo assembly instructions  
-✅ Computes final value of `z`  
-✅ Simple arithmetic-only instruction (no bitwise/logical ops)  
-✅ Token recognition for compiler design learning  
-✅ Interactive input through terminal
-
----
-
-## 📂 Project Structure
-
-| File         | Description                        |
-|--------------|------------------------------------|
-| `lex_code.l` | Lexical analyzer to simulate instruction |
-| `README.md`  | Project documentation              |
+| File         | Description                           |
+|--------------|---------------------------------------|
+| `lex_code.l` | Lexical analyzer (Flex) source code   |
+| `README.md`  | Project documentation                 |
 
 ---
 
 ## ⚙️ Requirements
 
-- `gcc` – GNU Compiler Collection  
-- `flex` – for lexical analysis  
+- `gcc` — GNU Compiler Collection  
+- `flex` — Fast lexical analyzer generator  
+- `make` — Build automation tool (optional)
 
 ---
 
-## 🖥️ Setup (Windows with MSYS2)
+## 💻 Setup Instructions
 
-Open MSYS2 terminal and run:
+### 🪟 Windows (MSYS2)
+
+Open **MSYS2 terminal** and run:
 
 ```bash
 pacman -Syu
 pacman -S mingw-w64-x86_64-gcc flex make
-🐧 Setup (Linux / Ubuntu)
+🐧 Linux / Ubuntu
 bash
 Copy
 Edit
 sudo apt update
 sudo apt install gcc flex make
-🔨 Build Instructions
-To compile the project:
+🔧 Build Instructions
+To compile the program, run:
 
 bash
 Copy
@@ -61,11 +53,13 @@ Edit
 flex lex_code.l
 gcc lex.yy.c -o simulate -lm
 🚀 How to Run
+Execute the compiled program:
+
 bash
 Copy
 Edit
 ./simulate
-Then enter input like:
+Then provide input like:
 
 nginx
 Copy
@@ -104,7 +98,7 @@ Expression Evaluated:
 z=x 
 2
  −x+1
-For input: x3, the calculation is:
+For input x3, the calculation is:
 
 𝑧
 =
@@ -131,8 +125,7 @@ MUL	Multiplies two registers
 SUB	Subtracts two registers
 ADD	Adds two registers
 MOV	Moves result to output
-Registers:
-
+Register Usage
 r1 = x
 
 r2 = x * x
@@ -143,20 +136,24 @@ r4 = x² - x + 1
 
 r5 = constant 1
 
-r6 = final result holder
+r6 = final result (z)
 
-✍️ Author
+👨‍💻 Author
 Kumar Varaiy
-🎓 Roll Number: 23115051
-💻 B.Tech CSE, NIT Raipur
+📜 Roll Number: 23115051
+🎓 B.Tech CSE, NIT Raipur
 🔗 GitHub: KumarVaraiy
 
 📜 License
 Licensed under the MIT License.
 
 💡 Notes
-Input format must be like x<number> followed by compute
+Input must follow the format: x<number> compute
 
-Currently only supports basic arithmetic (no powers/logicals directly)
+Expression is fixed to x^2 - x + 1
 
-Expression is hardcoded to x^2 - x + 1
+Arithmetic only — no bitwise/logical/shift operations
+
+yaml
+Copy
+Edit
